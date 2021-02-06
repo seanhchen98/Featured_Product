@@ -1,0 +1,16 @@
+CREATE TABLE featuredProducts (
+	productId SERIAL NOT NULL PRIMARY KEY,
+	name varchar(24) NOT NULL,
+	brand varchar(24) NOT NULL,
+	department varchar(24) NOT NULL,
+	rating Numeric NOT NULL,
+	ratingCount INT NOT NULL,
+	price numeric(10,2) NOT NULL,
+	color JSON NOT NULL,
+	description varchar(50),
+	features JSON NOT NULL,
+	bestUse varchar(24),
+	materials varchar(24),
+	dimensions JSON NOT NULL,
+	weight JSON NOT NULL,
+);
