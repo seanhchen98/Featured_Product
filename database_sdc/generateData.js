@@ -5,11 +5,13 @@ const faker = require('faker');
 const fs = require('fs');
 
 // const writer = csvWriter();
-const writeUsers = fs.createWriteStream('data1.csv');
+// const writeUsers = fs.createWriteStream('data.csv');
+const writeUsers = fs.createWriteStream('data.csv');
 writeUsers.write('productId|name|brand|department|rating|ratingCount|price|shade|img|description|features|bestUse|materials|dimensions|weight\n', 'utf8');
 
 const generateData = (writer, encoding, cb) => {
-  let iterations = 10;
+  // let iterations = 10;
+  let iterations = 10000000;
   let id = 0;
   const write = () => {
     console.log(id);
@@ -32,7 +34,7 @@ const generateData = (writer, encoding, cb) => {
       const shade = faker.commerce.color();
       const img = `https://hrsjo3-sdc-rei-featuredproducts.s3-us-west-1.amazonaws.com/photos/img_${randImg}.png`;
       const description = faker.commerce.productDescription();
-      let features = JSON.stringify([faker.random.words(5), faker.random.words(4), faker.random.words(6), faker.random.words(5)]);
+      let features = JSON.stringify([faker.commerce.productAdjective(), faker.commerce.productAdjective(), faker.commerce.productAdjective(), faker.commerce.productAdjective()]);
       features = features.replace('[', '{');
       features = features.replace(']', '}');
       const bestUse = faker.random.word();

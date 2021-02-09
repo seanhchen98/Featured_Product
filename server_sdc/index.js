@@ -9,7 +9,7 @@ app.use('/product/:productId', express.static(path.join(__dirname, '../dist')));
 app.use('/', express.static(path.join(__dirname, '../dist')));
 app.use(cors());
 
-app.get('/api/product:productId', (req, res) => {
+app.get('/api/product/:productId', (req, res) => {
   const pid = req.params.productId;
   featureProduct(pid, (err, result) => {
     if (err) {

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const request = require('request');
 const fs = require('fs');
 
