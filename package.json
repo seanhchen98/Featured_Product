@@ -39,6 +39,7 @@
     "jquery": "^3.5.1",
     "mongoose": "^5.11.11",
     "mongoose-unique-validator": "^2.0.3",
+    "newrelic": "^7.1.1",
     "pg": "^8.5.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",

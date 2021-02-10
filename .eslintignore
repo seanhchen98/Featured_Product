@@ -1,2 +1,4 @@
 webpack.config.js
 /dist/bundle.js
+newrelic.js
+/k6/script.js
