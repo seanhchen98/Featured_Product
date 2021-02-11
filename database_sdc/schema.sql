@@ -18,3 +18,5 @@ CREATE TABLE featuredProducts (
 );
 
 COPY featuredproducts FROM '/Users/seanhchen98/Code/hackReactor/hrsjo3/sdc/Featured_Product/data.csv' DELIMITER '|' CSV HEADER;
+
+COPY featuredproducts from '/home/ubuntu/data.csv' delimiter '|' csv header;
